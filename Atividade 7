@@ -1,0 +1,12 @@
+vetor = [0]*15
+for posi in range(15):
+    add = int(input("Digite um valor inteiro: "))
+    vetor[posi] = add
+zero = 0
+quantidade = vetor.count(zero)
+print("Existem " + str(quantidade) + " zeros nessa lista.")
+print("A lista original é: " + str(vetor))
+lista = vetor
+for vezes in range(quantidade):
+    lista.remove(zero)
+print("A lista compactada é: " + str(lista))
