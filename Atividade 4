@@ -1,0 +1,5 @@
+vetor = []
+for i in range(6):
+    add = int(input("Digite um valor inteiro: "))
+    vetor.append(add)
+print(list(reversed(vetor)))
