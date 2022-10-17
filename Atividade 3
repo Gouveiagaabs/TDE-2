@@ -1,0 +1,26 @@
+vetor = []
+contador = 0
+while contador < 1:
+    valor = int(input("Digite um valor inteiro: "))
+    if valor >= 0:
+        vetor.append(valor)
+    else:
+        contador += 1
+print(vetor)
+maior = 0
+soma = 0
+pares = 0
+impares = 0
+for num in vetor:
+    if num > 5:
+        maior += 1
+    soma += num
+    if num % 2 == 0:
+        pares += num
+    else:
+        impares += num
+print("A quantidade de números maior que 5 é: " + str(maior))
+print("A soma dos valores é: " + str(soma))
+print("A soma dos valores pares é: " + str(pares))
+print("A soma dos valores ímpares é: " + str(impares))
+print("A quantidade de valores é: " + str(len(vetor)))
