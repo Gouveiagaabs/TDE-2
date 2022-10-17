@@ -1,0 +1,21 @@
+vetor1 = [0]*10 
+vetor2 = [0]*10 
+vetor3 = [0]*20 
+indice1 = 0 
+indice2 = 0 
+for posi in range(10): 
+    add = int(input("Digite um valor inteiro para o primeiro vetor: "))
+    vetor1[posi] = add
+for posi2 in range(10):
+    add2 = int(input("Digite um valor inteiro para o segundo vetor: "))
+    vetor2[posi2] = add2
+print("O primeiro vetor é: " + str(vetor1))
+print("O segundo vetor é: " + str(vetor2))
+for indice3 in range(20):
+    if indice3 % 2 == 0:
+        vetor3[indice3] = vetor1[indice1]
+        indice1 += 1
+    else:
+        vetor3[indice3] = vetor2[indice2]
+        indice2 += 1
+print("O vetor final é: " + str(vetor3))
