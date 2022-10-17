@@ -1,0 +1,44 @@
+vetor = [0]*20
+for posi in range(20):
+    add = int(input("Digite um valor inteiro DIFERENTE de zero: "))
+    vetor[posi] = add
+list = []
+menor = 0
+contador = 0
+for num in range(1,21):
+    menor = min(vetor)
+    vetor.remove(menor)
+    list.append(menor)
+repet = list[0]
+valor = 0
+quant = 0
+list.append(0)
+other = list
+indRemov = 0
+quantidade = 1
+soma = 0
+for repetido in range(1,21):
+    if repet == list[repetido]:
+        valor = repet
+        quant += 1
+        soma += 1
+    elif repet != list[repetido] and valor != 0:
+        quant += 1
+        print("O valor " + str(valor) + " se repete " + str(quant) + " vezes.")
+        indRemov = other.index(valor)
+        for i in range(1,quant):
+            other[indRemov+quantidade] = 0
+            quantidade += 1
+        valor = 0
+        quant = 0
+        quantidade = 1
+    repet = list[repetido]
+otherOrganized = []
+for org in range(1,22):
+    menor0 = min(other)
+    other.remove(menor0)
+    otherOrganized.append(menor0)
+for zero in range(soma+1):
+    otherOrganized.remove(otherOrganized[0])
+print("Foram removidos " + str(soma-1) + " números repetidos.")
+print(otherOrganized)
