@@ -1,0 +1,11 @@
+vetor = [0]*10
+for posi in range(10):
+    add = int(input("Digite um valor inteiro: "))
+    vetor[posi] = add
+for valor in vetor:
+    cont = 0
+    for num in vetor:
+        if valor == num:
+            cont += 1
+    if cont > 1:
+        print("O número " + str(valor) + " se repetiu " + str(cont) + " vezes.")
